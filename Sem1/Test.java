@@ -16,10 +16,13 @@ public class Test {
 //        int[] array = {1, 0, 0, 1, 1, 1};
 //        orderUnits(array);
 
-        int[] nums = {3, 2, 5, 3};
-        int value = 3;
-        int[] newArray = valueTransfer(nums, value);
-        System.out.println(Arrays.toString(newArray));
+//        int[] nums = {3, 2, 5, 3};
+//        int value = 3;
+//        int[] newArray = valueTransfer(nums, value);
+//        System.out.println(Arrays.toString(newArray));
+
+        String line = "Добро пожаловать в мир Java";
+        reverseSentence(line);
     }
 
     private static void greetTimeDay(String name, int hour) {
@@ -59,6 +62,16 @@ public class Test {
         System.out.println(Arrays.toString(array));
         return newArray;
 
+    }
+
+    private static void reverseSentence(String str) {
+        String[] arr = str.split(" ");
+        String res = "";
+        for (int i = arr.length - 1; i >= 0; i--) {
+            res += arr[i];
+            res += " ";
+        }
+        System.out.println(res);
     }
 
 }
