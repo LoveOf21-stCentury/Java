@@ -1,6 +1,7 @@
 package Sem1;
 
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Test {
@@ -15,6 +16,10 @@ public class Test {
 //        int[] array = {1, 0, 0, 1, 1, 1};
 //        orderUnits(array);
 
+        int[] nums = {3, 2, 5, 3};
+        int value = 3;
+        int[] newArray = valueTransfer(nums, value);
+        System.out.println(Arrays.toString(newArray));
     }
 
     private static void greetTimeDay(String name, int hour) {
@@ -40,4 +45,20 @@ public class Test {
         }
         System.out.println(counter);
     }
+
+    private static int[] valueTransfer(int[] array, int v) {
+        int[] newArray = new int[array.length];
+        Arrays.fill(newArray, v);
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != v) {
+                newArray[count] = array[i];
+                count++;
+            }
+        }
+        System.out.println(Arrays.toString(array));
+        return newArray;
+
+    }
+
 }
